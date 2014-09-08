@@ -27,6 +27,8 @@
 		35839A4E19B3FAF400B08ED0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35839A4D19B3FAF400B08ED0 /* Images.xcassets */; };
 		35839A5A19B3FAF400B08ED0 /* WorldExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35839A5919B3FAF400B08ED0 /* WorldExplorerTests.m */; };
 		35E7377919BCFFA5004F9719 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7377819BCFFA5004F9719 /* AppDelegate.m */; };
+		35E7377F19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7377C19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.m */; };
+		35E7378019BD0310004F9719 /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7377E19BD0310004F9719 /* AFMMRecordResponseSerializer.m */; };
 		C9BFCA0DBB024358AEA9622E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A32882BF7240379813D925 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,10 @@
 		35839A5819B3FAF400B08ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35839A5919B3FAF400B08ED0 /* WorldExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldExplorerTests.m; sourceTree = "<group>"; };
 		35E7377819BCFFA5004F9719 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35E7377B19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
+		35E7377C19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
+		35E7377D19BD0310004F9719 /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
+		35E7377E19BD0310004F9719 /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
 		4EB1E7A4B9394A26B29889BA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,9 +246,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		35E7377A19BD0310004F9719 /* AFMMRecordResponseSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				35E7377B19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.h */,
+				35E7377C19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.m */,
+				35E7377D19BD0310004F9719 /* AFMMRecordResponseSerializer.h */,
+				35E7377E19BD0310004F9719 /* AFMMRecordResponseSerializer.m */,
+			);
+			path = AFMMRecordResponseSerializer;
+			sourceTree = "<group>";
+		};
 		897873CD607F4907B2F9CAB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35E7377A19BD0310004F9719 /* AFMMRecordResponseSerializer */,
 				3556269719B40D8C00E79EEC /* CoreLocation.framework */,
 				3556269519B40D8000E79EEC /* MapKit.framework */,
 				3556267719B4021E00E79EEC /* CoreData.framework */,
@@ -387,8 +405,10 @@
 			files = (
 				3556268819B405F600E79EEC /* Venue.m in Sources */,
 				3556268519B405F600E79EEC /* Menu.m in Sources */,
+				35E7378019BD0310004F9719 /* AFMMRecordResponseSerializer.m in Sources */,
 				35839A4619B3FAF400B08ED0 /* WorldExplorer.xcdatamodeld in Sources */,
 				3556266F19B3FE1200E79EEC /* MapViewController.m in Sources */,
+				35E7377F19BD0310004F9719 /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				3556269419B40B9300E79EEC /* Constants.m in Sources */,
 				3556267619B4020100E79EEC /* WorldExplorerModel.xcdatamodeld in Sources */,
 				35E7377919BCFFA5004F9719 /* AppDelegate.m in Sources */,
