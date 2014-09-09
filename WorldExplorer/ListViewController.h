@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "MapViewController.h"
 
-
-@interface ListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

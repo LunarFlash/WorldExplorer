@@ -17,10 +17,10 @@
 #import "AFMMRecordResponseSerializationMapper.h"
 #import "Venue.h"
 #import "Location.h"
-#import "MapViewController.h"
 
 
-@interface ListViewController () <CLLocationManagerDelegate>
+
+@interface ListViewController ()
 
 @property (strong, nonatomic) NSArray *venues;
 
@@ -38,6 +38,14 @@
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     self.locationManager.distanceFilter = 10.0; //meters
+    // http://stackoverflow.com/questions/24062509/ios-8-location-services-not-working
+    [self.locationManager requestWhenInUseAuthorization];
+    // [self.locationManager startUpdatingLocation];
+    
+    
+    
+    
+    
     
     
     FourSquareSessionManager *sessionManager = [FourSquareSessionManager sharedClient];
@@ -62,6 +70,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indePath = sender;
+    Venue *venue = self.venues[indePath.row];
+    MapViewController *mapVC = segue.destinationViewController;
+    mapVC.venue = venue;
 }
 
 
@@ -90,7 +107,17 @@
 }
 
 
+#pragma mark UITableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"ListToMapSegue" sender:indexPath];
+}
+
+
 #pragma mark CLLocationManager Delegate
+
+
+
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     

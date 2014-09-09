@@ -55,7 +55,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Jzm-dD-Lha" id="p25-tj-6qb"/>
-                        <segue destination="w1Z-wb-vGn" kind="push" identifier="listToMapSegue" id="KWV-XX-Vb8"/>
+                        <segue destination="w1Z-wb-vGn" kind="push" identifier="ListToMapSegue" id="KWV-XX-Vb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
